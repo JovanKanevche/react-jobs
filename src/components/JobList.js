@@ -13,7 +13,7 @@ const Job = ({ id, title, city, investors }) => {
   );
 };
 
-const JobList = (props) => {
+function JobList(props) {
   const { loading, error, data } = useQuery(QUERY_JOBS);
 
   if (loading) return <p>Loading...</p>;
@@ -28,7 +28,7 @@ const JobList = (props) => {
       </GridComponent>
     </AppContainer>
   );
-};
+}
 
 const GridComponent = styled.div`
   display: grid;
